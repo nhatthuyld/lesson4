@@ -1,7 +1,7 @@
 package PageObject;
 import org.openqa.selenium.WebDriver;
 
-public class Homepage extends BasePageOne {
+public class Homepage extends BasePage {
 
     public Homepage(WebDriver driver) {
 

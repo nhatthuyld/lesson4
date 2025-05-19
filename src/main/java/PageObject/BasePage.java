@@ -11,14 +11,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.io.File;
 import java.time.Duration;
 
-public class BasePageOne {
+public class BasePage {
 
     WebDriver driver;
 
-    public BasePageOne(WebDriver driver) {
+    public BasePage(WebDriver driver) {
         this.driver = driver;
     }
-    private static final Logger log = LogManager.getLogger(BasePageOne.class);
+    private static final Logger log = LogManager.getLogger(BasePage.class);
 
 
     public void open_Url(String url_string) {

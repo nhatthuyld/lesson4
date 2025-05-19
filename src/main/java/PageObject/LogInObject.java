@@ -2,7 +2,7 @@ package PageObject;
 
 import org.openqa.selenium.WebDriver;
 
-public class LogInObject extends BasePageOne{
+public class LogInObject extends BasePage {
 
     String userNameSelector = "#user-name";
     String passWordSelector = "#password";

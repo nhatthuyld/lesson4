@@ -1,5 +1,5 @@
 
-import PageObject.BasePageOne;
+import PageObject.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -19,7 +19,7 @@ public class TestcaseBase {
     public void setup() {
 
         //clean exist image on screenshots fold before run
-        BasePageOne.cleanScreenshotFolder("screenshots");
+        BasePage.cleanScreenshotFolder("screenshots");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless=new");// to dataprovider run
         driver = new ChromeDriver();
