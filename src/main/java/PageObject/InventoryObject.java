@@ -9,14 +9,12 @@ public class InventoryObject extends BasePage {
 
     }
 
-    String addRemoveCssSector =".pricebar button" ;
-
-    public void addRemovetocard() {
-        findCssSelector(addRemoveCssSector).click();
+    public void addRemovetocart(String nthproduct) {
+        findCssSelector(nthproduct).click();
     }
 
-    public  String getTextAddRemoveButton(){
-        return (findCssSelector(addRemoveCssSector).getText());
+    public  String getTextAddRemoveButton(String nthproduct){
+        return (findCssSelector(nthproduct).getText());
 
     }
 }
