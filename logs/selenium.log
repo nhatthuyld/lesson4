@@ -1,0 +1,12 @@
+2025-05-20 16:14:12 INFO  BasePage - Deleted screenshot: Verify that the Remove button does not change back to the Add to Cart button_20250520_161041.png
+2025-05-20 16:14:12 INFO  BasePage - Deleted screenshot: Verify that the Remove button does not change back to the Add to Cart button_20250520_161037.png
+2025-05-20 16:14:16 INFO  TestCaseTwo - Login to Problem user
+2025-05-20 16:14:17 INFO  TestCaseTwo - Add to cart the first product
+2025-05-20 16:14:17 INFO  TestCaseTwo - Click remove product
+2025-05-20 16:14:17 INFO  TestCaseTwo - Verify that the Remove button does not change back to the Add to Cart button
+2025-05-20 16:14:17 ERROR SoftAssertFunction - ❌ Step [Verify that the Remove button does not change back to the Add to Cart button] failed: expected [Removee], but got [Remove]
+2025-05-20 16:14:20 INFO  TestCaseTwo - Login to Problem user
+2025-05-20 16:14:21 INFO  TestCaseTwo - Add to cart the third product
+2025-05-20 16:14:21 INFO  TestCaseTwo - Click remove product
+2025-05-20 16:14:21 INFO  TestCaseTwo - Verify Add to Cart button is not changed to Remove button
+2025-05-20 16:14:21 ERROR SoftAssertFunction - ❌ Step [Verify that the Remove button does not change back to the Add to Cart button] failed: expected [Aadd to cart], but got [Add to cart]
