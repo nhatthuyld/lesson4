@@ -2,9 +2,7 @@ package PageObject;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -55,6 +53,29 @@ public class BasePage {
         WebDriverWait wait = new WebDriverWait(driver,  Duration.ofMillis(10000));
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath_String)));
         element.sendKeys(s);
+    }
+    public void scrollToClickElement(By locator){
+        try {
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+            WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
+
+            // Scroll đến phần tử
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+
+            // Click phần tử
+            element.click();
+        } catch (Exception e) {
+            System.out.println("❌ Can not scroll to element: " + e.getMessage());
+        }
+    }
+
+    public void closeAlert(){
+        try {
+            Alert alert = driver.switchTo().alert();
+            alert.accept();
+        } catch (NoAlertPresentException e) {
+            System.out.println("❌No alert to be displayed " + e.getMessage());
+        }
     }
 
     public static void cleanScreenshotFolder(String folderPath) {

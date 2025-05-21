@@ -29,12 +29,11 @@ public class TestcaseBase {
 
         //clean exist image on screenshots fold before run
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless=new");// to dataprovider run
-        driver = new ChromeDriver();
+        options.addArguments("--incognito");
+        driver = new ChromeDriver(options);
         softAssert = new SoftAssert();
         driver.manage().window().maximize();
         driver.get(url);
-
 
     }
 

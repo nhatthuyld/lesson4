@@ -1,5 +1,6 @@
 package PageObject;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class InventoryObject extends BasePage {
@@ -13,8 +14,18 @@ public class InventoryObject extends BasePage {
         findCssSelector(nthproduct).click();
     }
 
-    public  String getTextAddRemoveButton(String nthproduct){
-        return (findCssSelector(nthproduct).getText());
+    public  String getTextAddRemoveButton(String nthproductCss){
+        return (findCssSelector(nthproductCss).getText());
 
     }
+
+    public  void clickCartIcon(){
+        findCssSelector(".shopping_cart_link").click();
+    }
+
+    public  void scrollToAddRemoveButton(String nthproductCss){
+        By AddBtn = By.cssSelector(nthproductCss);
+        scrollToClickElement(AddBtn);
+    }
+
 }
