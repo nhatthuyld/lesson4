@@ -1,4 +1,4 @@
-2025-05-21 17:01:41 INFO  BasePage - No screenshot files to delete in: screenshots
-2025-05-21 17:01:44 INFO  TestCaseTwoFive - Testcase 5
-2025-05-21 17:01:44 INFO  TestCaseTwoFive - Login to Standard user
-2025-05-21 17:01:45 INFO  TestCaseTwoFive - Add to cart three products
+2025-05-21 17:07:39 INFO  BasePage - Deleted screenshot: checkCheckOutSuccesful_20250521_170702.png
+2025-05-21 17:07:44 INFO  TestCaseTwoFive - Testcase 5
+2025-05-21 17:07:44 INFO  TestCaseTwoFive - Login to Standard user
+2025-05-21 17:07:44 INFO  TestCaseTwoFive - Add to cart three products
