@@ -25,7 +25,7 @@ public class TestCaseTwoFive extends TestcaseBase {
     public void checkRemoveButtonNotBack() {
         SoftAssert softAssert = new SoftAssert();
 
-        logger.info("Testcase 2 ");
+        logger.info("Testcase 2  ");
         LogInObject loginpage = new LogInObject(driver);
         logger.info("Login to Problem user");
         loginpage.fillUsername("problem_user");
