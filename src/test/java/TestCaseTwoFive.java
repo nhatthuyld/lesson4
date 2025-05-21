@@ -113,7 +113,7 @@ public class TestCaseTwoFive extends TestcaseBase {
     @Test(priority = 4)
     public void checkCheckOutSuccesful() throws InterruptedException {
 
-        logger.info("Testcase 5");
+        logger.info("Testcase 5 ");
         List<ProductObject> productlist = new ArrayList<>();
         List<ProductObject> productCartList = new ArrayList<>();
         SoftAssert softAssert = new SoftAssert();
