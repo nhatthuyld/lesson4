@@ -10,6 +10,12 @@ public class CartPageObject extends BasePage {
     String checkOutBtnCss = "checkout";
     String listNameCss=".inventory_item_name" ;
     String listPriceCss=".inventory_item_price";
+    String firstNameCSS = "#first-name";
+    String lastNameCSS = "#last-name";
+    String zipCodeCSS = "#postal-code";
+
+
+
 
     public CartPageObject(WebDriver driver) {
         super(driver);
@@ -37,5 +43,17 @@ public class CartPageObject extends BasePage {
             productListInCart.add(new ProductObject(name, price));
         }
         return productListInCart;
+    }
+
+    public void fillFirstName(String firstName){
+        findCssSelector(firstNameCSS).sendKeys(firstName);
+    }
+
+    public void fillLastName(String lastName){
+        findCssSelector(lastNameCSS).sendKeys(lastName);
+    }
+
+    public void fillZipcode(String zipCode){
+        findCssSelector(zipCodeCSS).sendKeys(zipCode);
     }
 }

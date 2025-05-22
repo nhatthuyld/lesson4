@@ -1,18 +1,15 @@
+import Common.FileGeneration;
 import PageObject.CartPageObject;
 import PageObject.InventoryObject;
 import PageObject.LogInObject;
 import PageObject.ProductObject;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-
-import java.time.Duration;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 
@@ -183,9 +180,9 @@ public class TestCaseTwoFive extends TestcaseBase {
 
         //equal total price
         double totalpriceCheckOut = Double.parseDouble(cartPageObject.findCssSelector(".summary_total_label").getText().replace("Total: $", ""));
-        totalprice = totalprice + totalprice*0.08;
+        totalprice = totalprice + totalprice * 0.08;
         totalprice = Math.round(totalprice * 100.0) / 100.0;
-        softAssert.assertEquals(totalpriceCheckOut,totalprice);
+        softAssert.assertEquals(totalpriceCheckOut, totalprice);
 
         //click finish
         cartPageObject.findCssSelector("#finish");
@@ -195,6 +192,36 @@ public class TestCaseTwoFive extends TestcaseBase {
         softAssert.assertFalse(currentUrl.contains("/error") || currentUrl.contains("404"), "Trang bị lỗi chuyển hướng");
         softAssert.assertAll();
 
+
+    }
+
+    @Test(dataProvider = "csvDataProvider", dataProviderClass = FileGeneration.class)
+    public void checkMoreUserInfo(HashMap<String, String> data) throws InterruptedException {
+
+        SoftAssert softAssert = new SoftAssert();
+        logger.info("Testcase 6: Check more user Information");
+
+        LogInObject loginpage = new LogInObject(driver);
+        logger.info("Login to Standard user");
+        loginpage.fillUsername("standard_user");
+        loginpage.fillPassword("secret_sauce");
+        loginpage.clickLogin();
+
+        //click add to cart
+        logger.info("Add to cart the first product");
+        InventoryObject inventory = new InventoryObject(driver);
+        inventory.addRemovetocart("div.inventory_item:nth-of-type(1) button");
+
+        //click cart icon
+        inventory.clickCartIcon();
+        //click checkout
+        CartPageObject cartpageObject = new CartPageObject(driver);
+        cartpageObject.clickCheckOutButton();
+        cartpageObject.fillFirstName(data.get("firstname"));
+        cartpageObject.fillLastName(data.get("lastname"));
+        cartpageObject.fillZipcode(data.get("zipcode"));
+
+        cartpageObject.findCssSelector("#continue").click();
 
     }
 }

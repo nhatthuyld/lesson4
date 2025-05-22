@@ -44,7 +44,6 @@ public class TestcaseBase {
             softAssert.assertAll();  // Ném lỗi nếu có
         } catch (AssertionError e) {
             System.out.println("❗SoftAssert failed in: " + result.getMethod().getMethodName());
-            // Đính kèm lỗi để TestNG ghi nhận fail, nhưng không dừng test suite
             result.setStatus(ITestResult.FAILURE);
             result.setThrowable(e);
         } finally {

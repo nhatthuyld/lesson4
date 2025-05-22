@@ -1,4 +1,10 @@
-2025-05-21 17:07:39 INFO  BasePage - Deleted screenshot: checkCheckOutSuccesful_20250521_170702.png
-2025-05-21 17:07:44 INFO  TestCaseTwoFive - Testcase 5
-2025-05-21 17:07:44 INFO  TestCaseTwoFive - Login to Standard user
-2025-05-21 17:07:44 INFO  TestCaseTwoFive - Add to cart three products
+2025-05-22 15:29:36 INFO  BasePage - Deleted screenshot: checkMoreUserInfo_20250522_152828.png
+2025-05-22 15:29:40 INFO  TestCaseTwoFive - Testcase 6: Check more user Information
+2025-05-22 15:29:40 INFO  TestCaseTwoFive - Login to Standard user
+2025-05-22 15:29:40 INFO  TestCaseTwoFive - Add to cart the first product
+2025-05-22 15:29:44 INFO  TestCaseTwoFive - Testcase 6: Check more user Information
+2025-05-22 15:29:44 INFO  TestCaseTwoFive - Login to Standard user
+2025-05-22 15:29:45 INFO  TestCaseTwoFive - Add to cart the first product
+2025-05-22 15:29:48 INFO  TestCaseTwoFive - Testcase 6: Check more user Information
+2025-05-22 15:29:48 INFO  TestCaseTwoFive - Login to Standard user
+2025-05-22 15:29:49 INFO  TestCaseTwoFive - Add to cart the first product
