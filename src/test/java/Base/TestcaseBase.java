@@ -1,3 +1,4 @@
+package Base;
 
 import PageObject.BasePage;
 import org.openqa.selenium.WebDriver;
@@ -11,9 +12,9 @@ import org.testng.asserts.SoftAssert;
 
 
 public class TestcaseBase {
-    WebDriver driver;
+    protected WebDriver driver;
     private static String url = "https://www.saucedemo.com/";
-    SoftAssert softAssert;
+    protected SoftAssert softAssert;
 
     public WebDriver getDriver() {
         return driver;
